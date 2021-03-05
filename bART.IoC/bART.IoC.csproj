@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\bART.Mappers\bART.Mappers.csproj" />
+    <ProjectReference Include="..\bART.Services.Interfaces\bART.Services.Interfaces.csproj" />
+    <ProjectReference Include="..\bART.Services\bART.Services.csproj" />
+  </ItemGroup>
+
+</Project>
