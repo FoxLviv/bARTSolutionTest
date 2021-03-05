@@ -7,7 +7,6 @@ namespace bART.WebAPI.Models.Accounts
         [Required]
         public string Name { get; set; }
         [Required]
-        [EmailAddress]
         public List<string> ContactEmails { get; set; }
     }
 }
