@@ -21,9 +21,9 @@ namespace bART.WebAPI.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreateAccountAsync(CreateAccountViewModel createContactViewModel)
+        public async Task<IActionResult> CreateAccountAsync(CreateAccountViewModel createAccountViewModel)
         {
-            var createAccountDTO = _mapper.Map<CreateAccountDTO>(createContactViewModel);
+            var createAccountDTO = _mapper.Map<CreateAccountDTO>(createAccountViewModel);
             var resultDTO = await _accountService.CreateAccountAsync(createAccountDTO);
             var resultVM = _mapper.Map<AccountViewModel>(resultDTO);
             return Ok(resultVM);

@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using bART.WebAPI.Models.Contacts;
+using System.ComponentModel.DataAnnotations;
 
 namespace bART.WebAPI.Models.Incidents
 {
@@ -14,6 +15,6 @@ namespace bART.WebAPI.Models.Incidents
         [EmailAddress]
         public string ContactEmail { get; set; }
         [Required]
-        public string IncidentDescription { get; set; }
+        public string Description { get; set; }
     }
 }

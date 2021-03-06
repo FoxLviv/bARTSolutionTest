@@ -19,7 +19,9 @@ namespace bART.Mappers
             CreateMap<ContactEntity, ContactDTO>();
 
             CreateMap<CreateIncidentDTO, IncidentEntity>();
-            CreateMap<IncidentEntity, IncidentDTO>();
+            CreateMap<IncidentEntity, IncidentDTO>()
+                .ForMember(dto=>dto.Accounts, opt=>opt
+                    .MapFrom(ent=>ent.Accounts));
         }
     }
 }

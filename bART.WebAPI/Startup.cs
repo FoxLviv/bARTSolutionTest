@@ -1,5 +1,6 @@
 using bART.Domain;
 using bART.IoC;
+using bART.WebAPI.Filters;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -33,6 +34,13 @@ namespace bART.WebAPI
             services.AddCustomServices();
             services.AddMapper();
 
+            #region ExceptionFilter
+            services.AddScoped<ExceptionFilter>();
+            services.AddMvc(options =>
+            {
+                options.Filters.Add<ExceptionFilter>();
+            });
+            #endregion
             #region Swagger
             services.AddSwaggerGen(c =>
             {

@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 
 namespace bART.Services.Interfaces
 {
-    public interface IIncedentService
+    public interface IIncidentService
     {
         Task<IncidentDTO> CreateIncidentAsync(CreateIncidentDTO incidentDTO);
     }

@@ -27,9 +27,7 @@ namespace bART.Services
             {
                 var contactEntity = await _dBContext.Contacts.SingleOrDefaultAsync(c => c.Email == email);
                 contactEntity.AccountName = accountEntity.Name;
-            }
-            
-
+            }           
 
             await _dBContext.Accounts.AddAsync(accountEntity);
             await _dBContext.SaveChangesAsync();

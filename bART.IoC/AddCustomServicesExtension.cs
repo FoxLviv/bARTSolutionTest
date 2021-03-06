@@ -13,7 +13,7 @@ namespace bART.IoC
         {
             serviceCollection.AddTransient<IAccountService, AccountService>();
             serviceCollection.AddTransient<IContactService, ContactService>();
-            //serviceCollection.AddTransient<IIncedentService, IIncedentService>();
+            serviceCollection.AddTransient<IIncidentService, IncidentService>();
         }
     }
 }
